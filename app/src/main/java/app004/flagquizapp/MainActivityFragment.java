@@ -6,6 +6,7 @@ import java.security.SecureRandom;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.annotation.SuppressLint;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.res.AssetManager;
@@ -53,6 +54,7 @@ public class MainActivityFragment extends Fragment {
     }
 
 
+    @SuppressLint("StringFormatMatches")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -91,7 +93,7 @@ public class MainActivityFragment extends Fragment {
         }
 
         this.questionNumberTextView.setText(
-                getString(app004.flagquizapp.R.string.question, 1, LogicaDePreguntas.getFlagsInQuiz()));
+                getString(app004.flagquizapp.R.string.NivelVFDI, 1, LogicaDePreguntas.getFlagsInQuiz()));
         return view;
     }
 
