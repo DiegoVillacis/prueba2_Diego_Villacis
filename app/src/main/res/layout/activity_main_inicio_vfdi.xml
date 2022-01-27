@@ -7,27 +7,57 @@
     tools:context=".MainInicioVFDI">
 
     <TextView
-        android:id="@+id/textUsuarioVFDI"
+        android:id="@+id/textUsuarioVFDI1"
         android:layout_width="203dp"
         android:layout_height="48dp"
-        android:layout_marginTop="132dp"
-        android:text="TextView"
+        android:layout_marginTop="168dp"
+        android:text="@string/textUsuarioVFDI"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonIngresarVFDI"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="84dp"
+        android:onClick="onClick"
+        android:text="Ingresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassVFDI" />
 
     <EditText
         android:id="@+id/editTextPassVFDI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textUsuarioVFDI"
+        app:layout_constraintTop_toBottomOf="@+id/textUsuarioVFDI1"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/textUsuarioVFDI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/textUsuarioVFDI"
+        app:layout_constraintBottom_toTopOf="@+id/textUsuarioVFDI1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.871" />
+
 </android.support.constraint.ConstraintLayout>
