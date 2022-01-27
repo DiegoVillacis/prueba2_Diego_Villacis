@@ -43,6 +43,8 @@ public class MainActivityFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.quizViewModel = ViewModelProviders.of(getActivity()).get(LogicaDePreguntas.class);
+
+
     }
 
     @Override
@@ -57,7 +59,7 @@ public class MainActivityFragment extends Fragment {
         this.shakeAnimation = AnimationUtils.loadAnimation(getActivity(), R.anim.incorrect_shake);
         this.shakeAnimation.setRepeatCount(3);
         this.quizConstraintLayout = view.findViewById(R.id.quizConstraintLayout);
-        this.questionNumberTextView = view.findViewById(R.id.questionNumberTextView);
+        this.questionNumberTextView = view.findViewById(R.id.textUsuariomMainVFDI);
         this.flagImageView = view.findViewById(R.id.flagImageView);
 
         this.guessTableRows = new TableRow[4];

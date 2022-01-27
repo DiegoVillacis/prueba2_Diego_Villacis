@@ -33,27 +33,40 @@ public class MainInicioVFDI extends AppCompatActivity {
                 String password = textPassVFDI.getText().toString();
 
 
-                if (email == "Diego" && password == "Diego") {
+                if (email.equals("Diego") || email.equals("UTA") && password.equals("Diego") || password.equals("UTA")) {
                     Toast.makeText(getApplicationContext(), "Ha iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
-                    crearInicio();
+                    crearInicio(v);
                 } else
                     Toast.makeText(getApplicationContext(), "Email o contraseña incorrectos", Toast.LENGTH_SHORT).show();
             }
+
+
         });
     }
 
-    public void crearInicio(){
-        Intent intent = new Intent(this, MainInicioVFDI.class);
+
+
+    public void crearInicio(View view){
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+
+        EditText nombre = (EditText) findViewById(R.id.textUsuarioVFDI);
+        ;
+        String mensaje1 = nombre.getText().toString();
+        intent.putExtra(String.valueOf(textUsuarioVFDI), mensaje1);
+        startActivity(intent);
+
     }
+
+
 
     public void onClick(View v) {
 
         String email = textUsuarioVFDI.getText().toString();
         String password = textPassVFDI.getText().toString();
 
-        if (email == "Diego" && password == "Diego")
-            crearInicio(); Toast.makeText(getApplicationContext(), "Ha iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
+        if (email.equals("Diego") || email.equals("UTA") && password.equals("Diego") || password.equals("UTA"))
+            crearInicio(v); Toast.makeText(getApplicationContext(), "Ha iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
     }
 
 }
