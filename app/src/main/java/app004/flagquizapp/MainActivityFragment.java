@@ -7,6 +7,7 @@ import java.security.SecureRandom;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.drawable.Drawable;
 
@@ -18,6 +19,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
+import android.view.ViewStructure;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
@@ -44,8 +46,12 @@ public class MainActivityFragment extends Fragment {
         super.onCreate(savedInstanceState);
         this.quizViewModel = ViewModelProviders.of(getActivity()).get(LogicaDePreguntas.class);
 
+        // Estamos en OtraActivity
+        //Bundle datos = this.getIntent().getExtras();
+        //String recuperamos_variable_string = datos.getString("variable_usuarioVFDI");
 
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

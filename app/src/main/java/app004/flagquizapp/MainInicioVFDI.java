@@ -50,10 +50,7 @@ public class MainInicioVFDI extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
-        EditText nombre = (EditText) findViewById(R.id.textUsuarioVFDI);
-        ;
-        String mensaje1 = nombre.getText().toString();
-        intent.putExtra(String.valueOf(textUsuarioVFDI), mensaje1);
+        intent.putExtra("variable_usuarioVFDI", textUsuarioVFDI.getText());
         startActivity(intent);
 
     }

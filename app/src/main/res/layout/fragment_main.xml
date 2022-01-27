@@ -24,7 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUsuarioVFDI" />
 
     <ImageView
         android:id="@+id/flagImageView"
@@ -212,10 +212,10 @@
         app:layout_constraintTop_toBottomOf="@+id/answersTableLayout" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewUsuarioVFDI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
+        android:layout_marginStart="88dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
@@ -228,7 +228,8 @@
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/textUsuariomMainVFDI"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toEndOf="@+id/textViewUsuarioVFDI"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
